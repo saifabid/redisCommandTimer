@@ -16,7 +16,7 @@ const (
 	get = "get"
 )
 const (
-	number = 1000 // change this to the number of tests you want to run
+	n = 1000 // change this to the number of tests you want to run
 )
 
 func checkErr(e error) {
@@ -30,7 +30,7 @@ func main() {
 	checkErr(err)
 
 	startTime := time.Now()
-	for i := 0; i < 1000; i++ {
+	for i := 0; i < n; i++ {
 		c.Cmd(set, i)
 		c.Cmd(get)
 
